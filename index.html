@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hostel Management System</title>
+  <link rel="stylesheet" type="text/css" href="style.css"> 
+  </style>
+</head>
+<body>
+
+  <nav>
+    <button onclick="openForm('studentForm')">Student Registration</button>
+    <button onclick="openForm('hostelForm')">Hostel Registration</button>
+    <button onclick="openForm('duesForm')">Submit Hostel Dues</button>
+  </nav>
+
+  <form id="studentForm">
+    <h2>Student Registration Form</h2>
+    <label for="studentName">Name:</label>
+    <input type="text" id="studentName" required>
+
+    <label for="studentRollNumber">Roll Number:</label>
+    <input type="text" id="studentRollNumber" required>
+
+    <label for="studentGender">Gender:</label>
+    <input type="text" id="studentGender" required>
+
+    <label for="studentContactNumber">Contact Number:</label>
+    <input type="text" id="studentContactNumber" required>
+
+    <label for="studentAddress">Address:</label>
+    <input type="text" id="studentAddress" required>
+
+    <button type="button" onclick="registerStudent()" id="reg_button">Register</button>
+  </form>
+
+  <form id="hostelForm">
+    <h2>Hostel Registration Form</h2>
+    <label for="hostelName">Name:</label>
+    <input type="text" id="hostelName" required>
+
+    <label for="hostelLocation">Location:</label>
+    <input type="text" id="hostelLocation" required>
+
+    <label for="hostelCapacity">Capacity:</label>
+    <input type="text" id="hostelCapacity" required>
+
+    <button type="button" onclick="registerHostel()">Register</button>
+  </form>
+
+  <form id="duesForm">
+    <h2>Hostel Dues Submission Form</h2>
+    <label for="duesRollNumber">Roll Number:</label>
+    <input type="text" id="duesRollNumber" required>
+
+    <label for="duesAmount">Amount:</label>
+    <input type="text" id="duesAmount" required>
+
+    <button type="button" onclick="submitDues()">Submit Hostel Dues</button>
+  </form>
+<script src="hostel.js"></script>  
+</body>
+</html>
